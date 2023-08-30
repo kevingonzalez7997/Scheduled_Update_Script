@@ -39,3 +39,17 @@ echo "$output_from_update" > "$file_name_daily"
 
 #This will print confirmation that the task is complete
 echo "files have been updated and upgrade information has been stored"
+
+
+
+#Lastly we have to create the corn
+#cron allows us to run tasks automatically on a given time/schedules
+#First we open our crontab 
+#crontab -e
+#Then we add our given schedule 0 23 * * 5
+#0=min 23=hr *=day *=month 5=5th day of the week , Friday
+#Follow that by the path of where the script is 
+#In this case it was in the home directory
+#0 23 * * 5 /~/update_server_script.sh
+
+
